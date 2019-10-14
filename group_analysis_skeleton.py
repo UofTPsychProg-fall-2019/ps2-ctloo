@@ -140,6 +140,13 @@ ttest_face = scipy.stats.ttest_rel(data_face[data_face[:,2]==1,4], data_face[dat
 #
 #print('\nOVERALL: {:.2f}%, {:.1f} ms'.format(100*acc_avg,mrt_avg))
 
-print('\nOn blocks in which words were categorized, the average median response time for black/pleasant pairings ({:.1f} ms) was significantly greater than the average median response time for white/pleasant pairings ({:.1f} ms), t = {:.2f}, p < .05.'.format(mrt_word_bp, mrt_word_wp, ttest_word[0]))
+print('\nOn blocks in which words were categorized, the average median response time for black/pleasant pairings ({:.1f} ms) was significantly greater than the average median response time for white/pleasant pairings ({:.1f} ms), t = {:.2f}, p < .001.'.format(mrt_word_bp, mrt_word_wp, ttest_word[0]))
 
 print('\nOn blocks in which faces were categorized, the average median response time for black/pleasant pairings ({:.1f} ms) was significantly greater than the average median response time for white/pleasant pairings ({:.1f} ms), t = {:.2f}, p < .05.'.format(mrt_face_bp, mrt_face_wp, ttest_face[0]))
+
+#other averages
+print('\nOVERALL: {:.2f}%, {:.1f} ms'.format(100*acc_avg,mrt_avg))
+print('\nWORD STIMULI: {:.2f}%, {:.1f} ms'.format(100*word_acc_avg,word_mrt_avg))
+print('\nFACE STIMULI: {:.2f}%, {:.1f} ms'.format(100*face_acc_avg,face_mrt_avg))
+print('\nCONGRUENCY (WHITE/PLEASANT): {:.2f}%, {:.1f} ms'.format(100*acc_wp,mrt_wp))
+print('\nCONGRUENCY (BLACK/PLEASANT): {:.2f}%, {:.1f} ms'.format(100*acc_bp,mrt_bp))
